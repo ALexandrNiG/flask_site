@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+</head>
+<body>
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                <a href="/results/">Результаты</a>
+            </li>
+        <li>
+            <a href="/run/">Форма</a>
+        </li>
+        </ul>
+        <p>
+            <table frame="border" height="300" width="700">
+        <th>Имя</th><th>Статус</th><th>Номер</th>
+        {% for i in range(num) %}
+        <tr><th>{{context_names[i]}}</th><th>{{context_status[i]}}</th><th>{{context_phone[i]}}</th>
+        {% endfor %}
+    </table>
+        </p>
+        <p>{{creation_date}}</p>
+</body>
+</html>
